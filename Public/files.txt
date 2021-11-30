@@ -1,5 +1,3 @@
-.\Private
-.\Public
 .\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 .\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
 .\MsrcSecurityUpdates.testsMod.ps1
