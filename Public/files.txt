@@ -1,4 +1,3 @@
-.\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 .\MsrcSecurityUpdatesMod.psd1
 .\MsrcSecurityUpdatesMod.psm1
 .\Private\Get-CVRFID.ps1
