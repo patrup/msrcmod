@@ -8,8 +8,10 @@ Get-MsrcCvrfAffectedSoftwareMod.ps1
 Get-MsrcCvrfCVESummaryMod.ps1
 Get-MsrcCvrfDocumentMod.ps1
 Get-MsrcCvrfExploitabilityIndexMod.ps1
+Get-MsrcCvrfProductVulnerability.ps1s
 Get-MsrcSecurityBulletinHtmlMod.ps1
 Get-MsrcSecurityUpdateMod.ps1
+Get-MsrcThreatExploitStatus.ps1
 Get-MsrcVulnerabilityReportHtmlMod.ps1
 Set-MsrcAdalAccessTokenMod.ps1
 Set-MSRCApiKeyMod.ps1
