@@ -1,6 +1,4 @@
 .\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
-.\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
-.\MsrcSecurityUpdates.testsMod.ps1
 .\MsrcSecurityUpdatesMod.psd1
 .\MsrcSecurityUpdatesMod.psm1
 .\Private\Get-CVRFID.ps1
