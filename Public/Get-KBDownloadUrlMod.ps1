@@ -30,15 +30,15 @@ Process {
         ForEach-Object {
             $kb = $_
             #In older months, there won't be a subtype. Handle this so there are not empty ()'s
-            if ($kb.ID -like "*Release Notes*") {
-                $HTML_TO_RETURN += $('<a href="{0}" target="_blank">{1} ({2})' -f $kb.Url, $kb.ID, $kb.SubType)
-            }
-            else {
+            if ($kb.ID -match '\d{7}') {
                 if($kb.SubType){
                     $HTML_TO_RETURN += $('<a href="https://support.microsoft.com/help/{0}" target="_blank">{0} ({1})' -f $kb.ID, $kb.SubType)
                 } else {
                     $HTML_TO_RETURN += $('<a href="https://support.microsoft.com/help/{0}" target="_blank">{0}' -f $kb.ID)
                 }
+            }
+            else {
+                $HTML_TO_RETURN += $('<a href="{0}" target="_blank">{1} ({2})' -f $kb.Url, $kb.ID, $kb.SubType)
             }
         }
     }
