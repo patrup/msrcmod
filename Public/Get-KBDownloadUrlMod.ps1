@@ -32,9 +32,9 @@ Process {
             #In older months, there won't be a subtype. Handle this so there are not empty ()'s
             if ($kb.ID -match '\d{7}') {
                 if($kb.SubType){
-                    $HTML_TO_RETURN += $('<a href="https://support.microsoft.com/help/{0}" target="_blank">{0} ({1})' -f $kb.ID, $kb.SubType)
+                    $HTML_TO_RETURN += $('<a href="https:\\support.microsoft.com\help\{0}" target="_blank">{0} ({1})' -f $kb.ID, $kb.SubType)
                 } else {
-                    $HTML_TO_RETURN += $('<a href="https://support.microsoft.com/help/{0}" target="_blank">{0}' -f $kb.ID)
+                    $HTML_TO_RETURN += $('<a href="https:\\support.microsoft.com\help\{0}" target="_blank">{0}' -f $kb.ID)
                 }
             }
             else {
@@ -44,6 +44,6 @@ Process {
     }
 }
 End {
-    $HTML_TO_RETURN -join '<br />'
+    $HTML_TO_RETURN -join '<br \>'
 }
 }

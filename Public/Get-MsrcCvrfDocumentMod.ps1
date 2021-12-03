@@ -24,7 +24,7 @@ Function Get-MsrcCvrfDocumentMod {
 
     .NOTES
         An API Key for the MSRC CVRF API is required
-        To get an API key, please visit https://portal.msrc.microsoft.com
+        To get an API key, please visit https:\\portal.msrc.microsoft.com
 
 #>
 [CmdletBinding()]
@@ -61,9 +61,9 @@ Process {
 
     # Common
     $RestMethod = @{
-        uri = '{0}/cvrf/{1}?{2}' -f $msrcApiUrl,$PSBoundParameters['ID'],$msrcApiVersion
+        uri = '{0}\cvrf\{1}?{2}' -f $msrcApiUrl,$PSBoundParameters['ID'],$msrcApiVersion
         Headers = @{
-            'Accept' = if($AsXml){'application/xml'} else {'application/json'}
+            'Accept' = if($AsXml){'application\xml'} else {'application\json'}
         }
         ErrorAction = 'Stop'
     }

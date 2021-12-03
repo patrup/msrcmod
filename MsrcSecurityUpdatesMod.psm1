@@ -15,3 +15,4 @@ Foreach ($import in @($Public + $Private))
 
 # Export all the functions
 Export-ModuleMember -Function $Public.Basename -Alias *
+

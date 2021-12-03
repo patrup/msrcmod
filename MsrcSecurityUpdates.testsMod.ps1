@@ -17,7 +17,7 @@ Get-Help Get-MsrcCvrfAffectedSoftwareMod
 Get-Help Get-MsrcCvrfAffectedSoftwareMod -Examples
 #>
 
-Describe 'Function: Get-MsrcSecurityUpdateModMSRC (calls the /Updates API)' {
+Describe 'Function: Get-MsrcSecurityUpdateModMSRC (calls the \Updates API)' {
 
     It 'Get-MsrcSecurityUpdateMod - all' {
         Get-MsrcSecurityUpdateMod |
@@ -55,7 +55,7 @@ Describe 'Function: Get-MsrcSecurityUpdateModMSRC (calls the /Updates API)' {
     }
 }
 
-Describe 'Function: Get-MsrcCvrfDocumentMod (calls the MSRC /cvrf API)' {
+Describe 'Function: Get-MsrcCvrfDocumentMod (calls the MSRC \cvrf API)' {
 
     It 'Get-MsrcCvrfDocumentMod - 2016-Nov' {
         Get-MsrcCvrfDocumentMod -ID 2016-Nov |
@@ -192,3 +192,4 @@ if($Error)
 {
     Write-Error -Message 'A pester test has failed during the validation process'
 }
+
