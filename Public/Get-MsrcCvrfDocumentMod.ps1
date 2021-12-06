@@ -24,7 +24,7 @@ Function Get-MsrcCvrfDocumentMod {
 
     .NOTES
         An API Key for the MSRC CVRF API is required
-        To get an API key, please visit https:\\portal.msrc.microsoft.com
+        To get an API key, please visit https://portal.msrc.microsoft.com
 
 #>
 [CmdletBinding()]

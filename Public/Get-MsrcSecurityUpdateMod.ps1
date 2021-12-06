@@ -63,7 +63,7 @@ Function Get-MsrcSecurityUpdateMod {
 
     .NOTES
         An API Key for the MSRC CVRF API is required
-        To get an API key, please visit https:\\portal.msrc.microsoft.com
+        To get an API key, please visit https://portal.msrc.microsoft.com
 
 #>
 [CmdletBinding(DefaultParameterSetName='All')]
@@ -120,7 +120,7 @@ Process {
 
             $sb = New-Object System.Text.StringBuilder
 
-            $null = $sb.Append("$($msrcApiUrl)\Updates?`$filter=")
+            $null = $sb.Append("$($msrcApiUrl)/Updates?`$filter=")
 
             if ($PSBoundParameters.ContainsKey('Before')) {
 
@@ -145,25 +145,25 @@ Process {
             break
         }
         ByYear {
-            $url = "{0}\Updates('{1}')?{2}" -f $msrcApiUrl,$Year,$msrcApiVersion
+            $url = "{0}/Updates('{1}')?{2}" -f $msrcApiUrl,$Year,$msrcApiVersion
             break
         }
         ByVulnerability {
-            $url = "{0}\Updates('{1}')?{2}" -f $msrcApiUrl,$Vulnerability,$msrcApiVersion
+            $url = "{0}/Updates('{1}')?{2}" -f $msrcApiUrl,$Vulnerability,$msrcApiVersion
             break
         }
         ByCVRF {
-            $url = "{0}\Updates('{1}')?{2}" -f $msrcApiUrl,$($PSBoundParameters['CVRF']),$msrcApiVersion
+            $url = "{0}/Updates('{1}')?{2}" -f $msrcApiUrl,$($PSBoundParameters['CVRF']),$msrcApiVersion
             break
         }
         Default {
-            $url = "{0}\Updates?{1}" -f $msrcApiUrl,$msrcApiVersion
+            $url = "{0}/Updates?{1}" -f $msrcApiUrl,$msrcApiVersion
         }
     }
 
     $RestMethod = @{
         uri = $url
-        Headers = @{ 'Accept' = 'application\json' }
+        Headers = @{ 'Accept' = 'application/json' }
         ErrorAction = 'Stop'
     }
     if ($global:msrcProxy){
@@ -189,7 +189,7 @@ Process {
     }
 
     if (-not $r) {
-        Write-Warning -Message 'No results returned from the \Update API'
+        Write-Warning -Message 'No results returned from the /Update API'
     } else {
         $r.Value
     }
