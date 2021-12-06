@@ -87,7 +87,9 @@ FunctionsToExport = @(
     'Get-MsrcCvrfExploitabilityIndexMod',
     'Get-MsrcSecurityBulletinHtmlMod',
     'Get-MsrcSecurityUpdateMod',
-    'Get-MsrcVulnerabilityReportHtmlMod'
+    'Get-MsrcVulnerabilityReportHtmlMod',
+    'Set-MSRCAdalAccessTokenMod',
+    'Set-MSRCApiKeyMod'
 )
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.

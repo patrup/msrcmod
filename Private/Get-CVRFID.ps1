@@ -9,9 +9,9 @@ Begin {
 }
 Process {
     $RestMethod = @{
-        uri = '{0}/Updates?{1}' -f $global:msrcApiUrl,$global:msrcApiVersion
+        uri = '{0}\Updates?{1}' -f $global:msrcApiUrl,$global:msrcApiVersion
         Headers = @{
-            'Accept' = 'application/json'
+            'Accept' = 'application\json'
         }
         ErrorAction = 'Stop'
     }

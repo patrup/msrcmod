@@ -1,5 +1,15 @@
 vscode/launch.json
+/lib
+/lib/Net45
+/lib/Net45/HtmlAgilityPack.dll
+/lib/Net45/HtmlAgilityPack.pdb
+/lib/Net45/HtmlAgilityPack.XML
+/lib/NetCore45
+/lib/NetCore45/HtmlAgilityPack.dll
+/lib/NetCore45/HtmlAgilityPack.pdb
+/lib/NetCore45/HtmlAgilityPack.XML
 /Private/Get-CVRFID.ps1
+/Private/Get-HTMLfromUrl.ps1
 /Private/Get-MsrcCvrfProductVulnerability.ps1
 /Private/Get-MsrcThreatExploitStatus.ps1
 /Private/ParseJsonString.ps1
