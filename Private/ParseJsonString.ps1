@@ -2,7 +2,7 @@
 # (workaround to overcome ConvertFrom-Json limitation on PowerShell 4.0 and earlier)
 
 # Based on code by Florian Feldhaus at 'ConvertFrom-Json max length'
-# https:\\stackoverflow.com\questions\16854057\convertfrom-json-max-length
+# https://stackoverflow.com/questions/16854057/convertfrom-json-max-length
 # With the following changes:
 # - ParseJsonString calls ParseItem, not ParseJsonObject (suggested by Dmitry Lobanov)
 # - if-else test in ParseJsonObject is replaced by '$parsedItem = ParseItem $item'
@@ -50,4 +50,3 @@ function ParseJsonString($json) {
         $config = $javaScriptSerializer.DeserializeObject($json)
         return ParseItem($config)
 }
-

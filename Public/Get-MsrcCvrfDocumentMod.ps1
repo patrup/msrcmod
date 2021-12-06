@@ -61,9 +61,9 @@ Process {
 
     # Common
     $RestMethod = @{
-        uri = '{0}\cvrf\{1}?{2}' -f $msrcApiUrl,$PSBoundParameters['ID'],$msrcApiVersion
+        uri = '{0}/cvrf/{1}?{2}' -f $msrcApiUrl,$PSBoundParameters['ID'],$msrcApiVersion
         Headers = @{
-            'Accept' = if($AsXml){'application\xml'} else {'application\json'}
+            'Accept' = if($AsXml){'application/xml'} else {'application/json'}
         }
         ErrorAction = 'Stop'
     }
